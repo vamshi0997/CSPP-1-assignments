@@ -5,7 +5,7 @@
 #Number of vowels: 5
 
 def main():
-    s = input()
+    s = input('')
 	# the input string is in s
 	# remove pass and start your code here
     c= 0

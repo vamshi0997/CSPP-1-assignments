@@ -1,3 +1,4 @@
+
 """vowels
 name
 """
@@ -8,7 +9,7 @@ name
 
 #Number of vowels: 5
 def main():
-	"""now in main function"""
+	""" now in main function """
     s = input()
 	# the input string is in s
 	# remove pass and start your code here

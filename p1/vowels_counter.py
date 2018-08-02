@@ -6,8 +6,8 @@ name
 #Write a program that counts up the number of vowels contained in the string s. 
 #Valid vowels are: 'a', 'e', 'i', 'o', and 'u'. 
 #For example, if s = 'azcbobobegghakl', your program should print:
-
 #Number of vowels: 5
+
 def main():
     
 	""" now in main function """

@@ -9,14 +9,14 @@ name: vamshi
 
 def main():
     """ now in main function """
-    s_ = input()
+    str1_ = input()
 #the input string is in s
 #remove pass and start your code here
-    c_ = 0
-    for i in s_:
+    count_ = 0
+    for i in str1_:
         if i in ('a', 'e', 'i', 'o', 'u'):
-            c_ += 1
-    print(c_)
+            count_ += 1
+    print(count_)
 
 
 if __name__ == "__main__":

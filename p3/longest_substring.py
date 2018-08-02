@@ -34,11 +34,11 @@ def main():
                 max = str1_
             str1_ = ""
     if len(str_) == 1:
-    	str1_ = str_
+        str1_ = str_
     if len(str1_) > len(max):
         print(str1_)
     else:
         print(max)
 
 if __name__ == "__main__":
-	main()
+    main()

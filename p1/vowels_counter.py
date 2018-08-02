@@ -10,8 +10,8 @@ def main():
 	# remove pass and start your code here
     c_= 0
     for i in s_:
-        if i in ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'):
-            c_=c+1
+        if i in ('a', 'e', 'i', 'o','u'):
+            c_+=1
     print(c_)
 
 

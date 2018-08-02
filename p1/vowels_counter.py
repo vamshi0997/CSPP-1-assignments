@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3.7
-"""vowels
-name
+"""
+name: vamshi
 """
 #Assume s is a string of lower case characters.
 #Write a program that counts up the number of vowels contained in the string s. 

@@ -1,5 +1,4 @@
 '''Assume s is a string of lower case characters.
-
 Write a program that prints the longest substring of s 
 in which the letters occur in alphabetical order.
 For example, if s = 'azcbobobegghakl', then your program should print
@@ -23,11 +22,10 @@ def main():
     # remove pass and start your code here
     le_ = len(str_)
     str1_ = ""
-    max = ""
     for i in range(le_ -1):
         if str_[i] <= str_[i+1]:
             str1_ = str1_ + str_[i]
-            if (i == le_-2):
+            if i == le_-2:
                 str1_ = str1_+str_[i+1]
         else:
             str1_ = str1_ + str_[i]
@@ -36,11 +34,10 @@ def main():
             str1_ = ""
     if len(str_) == 1:
     	str1_ = str_
-
     if len(str1_) > len(max):
         print(str1_)
     else:
         print(max)
 
-if __name__== "__main__":
+if __name__ == "__main__":
 	main()

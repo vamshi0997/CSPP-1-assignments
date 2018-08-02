@@ -22,6 +22,7 @@ def main():
     # remove pass and start your code here
     le_ = len(str_)
     str1_ = ""
+    max = ""
     for i in range(le_ -1):
         if str_[i] <= str_[i+1]:
             str1_ = str1_ + str_[i]

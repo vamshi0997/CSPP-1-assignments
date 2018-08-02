@@ -9,6 +9,7 @@ name
 
 #Number of vowels: 5
 def main():
+    
 	""" now in main function """
     s = input()
 	# the input string is in s

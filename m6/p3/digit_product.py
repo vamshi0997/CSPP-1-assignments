@@ -16,6 +16,8 @@ def main():
             num = int(num/10)
             product = product*rem
         print(product)
+    elif num == 0:
+        print(0)
     else:
         num = -(num)
         while num >= 1:

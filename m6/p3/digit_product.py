@@ -11,16 +11,22 @@ def main():
     num = int(input())
     product = 1
     if num > 0:
-        while num >= 1:
+        while num > 1:
+            if num == 0:
+                break
             rem = num%10
+            print(rem)
             num = int(num/10)
+            print(num)
             product = product*rem
         print(product)
     elif num == 0:
         print(0)
     else:
         num = -(num)
-        while num >= 1:
+        while num > 1:
+            if num == 0:
+                break
             rem = num%10
             num = int(num/10)
             product = product*rem

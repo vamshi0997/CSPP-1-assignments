@@ -12,8 +12,15 @@ def main():
     num = str(int_input)
     product = 1
     for i in num:
-        temp = int(i)
-        product = product*temp
+        if i != '-':
+            temp = int(i)
+            product = product*temp
+        else:
+            temp = int(i)
+            
+            
+
+            
     print(product)
 
 

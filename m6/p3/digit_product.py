@@ -13,9 +13,7 @@ def main():
     if num >= 1:
         while num > 1:
             rem = num%10
-            print(rem)
             num = int(num/10)
-            print(num)
             product = product*rem
         print(product)
     elif num == 0:

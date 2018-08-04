@@ -10,10 +10,8 @@ def main():
     '''
     num = int(input())
     product = 1
-    if num > 0:
+    if num >= 1:
         while num > 1:
-            if num == 0:
-                break
             rem = num%10
             print(rem)
             num = int(num/10)
@@ -25,8 +23,6 @@ def main():
     else:
         num = -(num)
         while num > 1:
-            if num == 0:
-                break
             rem = num%10
             num = int(num/10)
             product = product*rem

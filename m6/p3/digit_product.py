@@ -8,20 +8,23 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-    int_input = int(input())
-    num = str(int_input)
+    num = int(input())
     product = 1
-    for i in num:
-        if i != '-':
-            temp = int(i)
-            product = product*temp
-        else:
-            temp = int(i)
-            
-            
+    if num > 0:
+        while num >= 1:
+            rem = num%10
+            num = int(num/10)
+            product = product*rem
+        print(product)
+    else:
+        num = -(num)
+        while num >= 1:
+            rem = num%10
+            num = int(num/10)
+            product = product*rem
+        print(-product)
 
-            
-    print(product)
+
 
 
 if __name__ == "__main__":

@@ -13,8 +13,11 @@ def main():
     if num >= 1:
         while num > 1:
             rem = num%10
+            print(rem)
             num = int(num/10)
+            print(num)
             product = product*rem
+            print(product)
         print(product)
     elif num == 0:
         print(0)

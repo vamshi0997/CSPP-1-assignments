@@ -32,6 +32,7 @@ def payingdebtoffinayear_(balance_, annualinterestrate_, monthlypaymentrate_):
         min_ = monthlypaymentrate_ * balance_
         unpaid_ = balance_ - min_
         balance_ = unpaid_ + ((annualinterestrate_/12))*unpaid_
+        i = i+1
     return round(balance_, 2)
 
 def main():

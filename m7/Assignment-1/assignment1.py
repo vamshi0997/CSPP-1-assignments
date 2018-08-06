@@ -26,12 +26,12 @@
 # Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
 # Updated balance = (Monthly unpaid balance)+(Monthly interest rate x Monthly unpaid balance)'''
 
-def payingdebtoffinayear_(balance_, annualInterestRate_, monthlyPaymentRate_):
+def payingdebtoffinayear_(balance_, annualinterestrate_, monthlypaymentrate_):
     ''' define the above parameters'''
     for i in range(12):
-        Min_ = monthlyPaymentRate_ * balance_
-        unpaid_ = balance_ - Min_
-        balance_ = unpaid_ + ((annualInterestRate_/12))*unpaid_
+        min_ = monthlypaymentrate_ * balance_
+        unpaid_ = balance_ - min_
+        balance_ = unpaid_ + ((annualinterestrate_/12))*unpaid_
     return round(balance_, 2)
 
 def main():

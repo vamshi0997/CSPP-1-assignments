@@ -12,7 +12,7 @@ def sumofdigits(n1_):
     '''
     if n1_ == 0:
         return 0
-    n1_ >= 1:
+    n1_ >= 1
     rem = n1_%10
     n1_ = n1_//10
     return rem + sumofdigits(n1_)

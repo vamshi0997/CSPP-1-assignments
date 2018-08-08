@@ -9,12 +9,13 @@ def inc(num):
     '''
     return num+1
 
-def apply_to_each(l2_, fuc):
+def apply_to_each(list2, fuc):
     '''adding function to every list element'''
-    return list(map(fuc, l2_))
+    return list(map(fuc, list2))
 
 def main():
-    '''data: any integer'''
+    '''
+    data:input can lbe any integer'''
     data = input()
     data = data.split()
     list1 = []

@@ -72,9 +72,9 @@ def hangman(secretword):
     '''
     # FILL IN YOUR CODE HERE...
     print("Welcome to the game, Hangman!")
-    print("I am thinking of a word that is", (secretword), "letters long.")
+    print("I am thinking of a word that is", len(secretword), "letters long.")
     print("------------------------------------------------")
-    guess = 10
+    guess = 12
     set1 = ""
     res = ""
     print("you have", guess, "guesses left")
@@ -89,12 +89,13 @@ def hangman(secretword):
         elif var in res:
             print("Oops! You've already guessed that letter:", get_guessed_word(secretword, res))
         elif secretword == get_guessed_word(secretword, set1):
+            print("Good guess:", set1)
             print("Congratulations, you won!")
             break
-        elif var in alp:
+        elif var in secretword:
             print("Good guess:", get_guessed_word(secretword, set1))
             guess = guess - 1
-        elif var not in alp:
+        elif var not in secretword:
             print("Oops! That letter is not in my word:", get_guessed_word(secretword, set1))
             guess = guess - 1
         res = res + var

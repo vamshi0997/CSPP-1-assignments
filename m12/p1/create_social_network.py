@@ -37,9 +37,9 @@ def create_social_network(data):
     data1 = data.strip().split('\n')
     for i in data1:
         if 'follows' in i:
-            s = i.strip().split('follows')
-            for j in s:
-                if s.index(j)%2 == 0:
+            str1 = i.strip().split('follows')
+            for j in str1:
+                if str1.index(j)%2 == 0:
                     j = j.strip()
                     len1 = len1 + [j]
                 else:

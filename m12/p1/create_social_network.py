@@ -41,6 +41,7 @@ def create_social_network(data):
             s = i.strip().split('follows')
             for j in s:
                 if s.index(j)%2 == 0:
+                    j = j.strip()
                     l1 = l1 + [j]
                 else:
                     k = j.strip().split(',')

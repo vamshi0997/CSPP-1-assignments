@@ -32,9 +32,8 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     emp = {}
-    l1 = []
-    l2 = []
-    n = []
+    len1 = []
+    len2 = []
     data1 = data.strip().split('\n')
     for i in data1:
         if 'follows' in i:
@@ -42,12 +41,12 @@ def create_social_network(data):
             for j in s:
                 if s.index(j)%2 == 0:
                     j = j.strip()
-                    l1 = l1 + [j]
+                    len1 = len1 + [j]
                 else:
                     k = j.strip().split(',')
-                    l2 = l2 + [k]
-    emp = dict(zip(l1,l2))
-    return emp 
+                    len2 = len2 + [k]
+    emp = dict(zip(len1, len2))
+    return emp
 
 def main():
     '''

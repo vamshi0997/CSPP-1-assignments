@@ -2,16 +2,16 @@
 #Implement the updateHand function.
 Make sure this function has no side effects:
 i.e., it must not mutate the hand passed in.
-Before pasting your function definition here, 
+Before pasting your function definition here,
 be sureyou've passed the appropriate tests in test_ps4a.py.'''
 
 
-def updateHand(hand, word):
+def updatehand(hand, word):
     """
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
     a letter appears in 'word', 'hand' has at least as
-    many of that letter in it. 
+    many of that letter in it.
 
     Updates the hand: uses up the letters in the given word
     and returns the new hand, without those letters in it.
@@ -19,28 +19,29 @@ def updateHand(hand, word):
     Has no side effects: does not modify hand.
 
     word: string
-    hand: dictionary (string -> int)    
+    hand: dictionary (string -> int)
     returns: dictionary (string -> int)
     """
-    a = {}
+    adic = {}
     for i in hand:
-        if i in word :
-            a[i] = hand[i] - word.count(i)
+        i = i + 1
+        if i in word:
+            adic[i] = hand[i] - word.count(i)
         else:
-            a[i] = hand[i]
-    return(a)    
+            adic[i] = hand[i]
+    return adic
 
 def main():
-	n=input()
-	adict={}
-	for i in range(int(n)):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	data1=input()
-	print(updateHand(adict,data1))
-		
+    ''' inside main function'''
+    num1 = input()
+    adict = {}
+    for i in range(int(num1)):
+        i = i + 1
+        data = input()
+        len1 = data.split()
+        adict[len1[0]] = int(len1[1])
+    data1 = input()
+    print(updatehand(adict, data1))
 
-
-if __name__== "__main__":
-	main()
+if __name__ == "__main__":
+    main()

@@ -24,7 +24,6 @@ def updatehand(hand, word):
     """
     adic = {}
     for i in hand:
-        i = i + 1
         if i in word:
             adic[i] = hand[i] - word.count(i)
         else:

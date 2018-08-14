@@ -42,9 +42,9 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
 
-    s = dict(hand)
-    t = list(s.values())
-    if (t.count('D') or t.count('C') or t.count('H') or t.count('C')) == 5:
+    samp = dict(hand)
+    temp = list(samp.values())
+    if (temp.count('D') or temp.count('C') or temp.count('H') or temp.count('C')) == 5:
         return 2
     return 0
 

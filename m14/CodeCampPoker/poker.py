@@ -21,16 +21,15 @@ def is_straight(hand):
     temp2 = ''
     sam = dict(hand)
     temp = list(sam.keys())
-    for x in temp:
-        num.append(dic[x])
+    for num1 in temp:
+        num.append(dic[num1])
     num.sort()
     for i in num:
         temp2 = temp2 + str(i)+" "
     str1 = '1 2 3 4 5 6 7 8 9 10 11 12 13 14 '
     if temp2 in str1:
         return 1
-    else:
-        return 0
+    return 0
 
 def is_flush(hand):
     '''

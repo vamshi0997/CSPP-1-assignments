@@ -98,9 +98,9 @@ def hand_rank(hand):
     if is_flush(hand) == 1 and is_straight(hand) == 1:
         return 8
     elif is_flush(hand) == 2:
-        return 5
-    elif is_four_of_a_kind(hand) == 5:
         return 7
+    elif is_four_of_a_kind(hand) == 5:
+        return 5
     elif is_four_of_a_kind(hand) == 4:
         return 6
     elif is_four_of_a_kind(hand) == 3:

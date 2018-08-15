@@ -44,6 +44,30 @@ def is_flush(hand):
     samp = dict(hand)
     temp = list(samp.values())
     if (temp.count('D') or temp.count('C') or temp.count('H') or temp.count('C')) == 5:
+        return 8
+    return 0
+
+def is_four_of_a_kind(hand):
+    list1 = [i[0] for i in hand]
+    list2 = set(list1)
+    len1 = len(list2)
+    count1 = 0
+    count2 =0
+    for k in hand:
+        if len1 == 2:
+            if list1.count(k[0]) >= 2:
+                count1 += 1
+            elif list1.count(k[0]) == 2:
+                count2 += 1 
+        elif list1.count(k[0]) == 4:
+            return 5
+        elif list1.count(k[0]) == 3:
+            return 3
+        elif list1.count(k[0]) == 2:
+            return 1
+    if count1 == 2:
+        return 4
+    elif count2 ==2:
         return 2
     return 0
 
@@ -71,12 +95,22 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    if is_flush(hand) == 2 and is_straight(hand) == 1:
-        return 3
+    if is_flush(hand) == 1 and is_straight(hand) == 1:
+        return 8
     elif is_flush(hand) == 2:
+        return 5
+    elif is_four_of_a_kind(hand) == 5:
+        return 7
+    elif is_four_of_a_kind(hand) == 4:
+        return 6
+    elif is_four_of_a_kind(hand) == 3:
+        return 3
+    elif is_four_of_a_kind(hand) == 2:
         return 2
-    elif is_straight(hand) == 1:
+    elif is_four_of_a_kind(hand) == 1:
         return 1
+    elif is_straight(hand) == 1:
+        return 4
     return 0
 
 def poker(hands):

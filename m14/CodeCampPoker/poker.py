@@ -100,17 +100,15 @@ def hand_rank(hand):
     elif is_flush(hand) == 2:
         return 7
     elif is_four_of_a_kind(hand) == 5:
-        return 5
-    elif is_four_of_a_kind(hand) == 4:
         return 6
+    elif is_four_of_a_kind(hand) == 4:
+        return 5
     elif is_four_of_a_kind(hand) == 3:
         return 3
     elif is_four_of_a_kind(hand) == 2:
         return 2
     elif is_four_of_a_kind(hand) == 1:
         return 1
-    elif is_straight(hand) == 1:
-        return 4
     return 0
 
 def poker(hands):

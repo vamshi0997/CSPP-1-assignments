@@ -41,8 +41,8 @@ def is_flush(hand):
 
     list1 = [i[1] for i in hand]
     for k in hand:
-    if (list1.count(k[1])) == 5:
-        return 1
+        if (list1.count(k[1])) == 5:
+            return 1
     return 0
 
 def is_four_of_a_kind(hand):

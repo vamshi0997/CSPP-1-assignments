@@ -14,11 +14,13 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
+    temp = " "
     list1 = ["--23456789TJQKA".index(i) for i,v in hand]
+    list1.sort()
     for k in list1:
-        temp2 = temp2 + str(i)+ " "
+        temp = temp + str(k) + " "
     str1 = '1 2 3 4 5 6 7 8 9 10 11 12 13 14 '
-    if temp2 in str1:
+    if temp in str1:
         return 1
     return 0
 

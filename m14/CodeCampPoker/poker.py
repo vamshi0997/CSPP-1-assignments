@@ -15,7 +15,7 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     temp = " "
-    list1 = ["--23456789TJQKA".index(i) for i,v in hand]
+    list1 = ["--23456789TJQKA".index(i[0]) for i in hand]
     list1.sort()
     for k in list1:
         temp = temp + str(k) + " "

@@ -41,6 +41,7 @@ def is_flush(hand):
     return 0
 
 def is_four_of_a_kind(hand):
+    ''' we have to check if the hand has four similar numbers'''
     list1 = [i[0] for i in hand]
     for k in hand:
         if list1.count(k[0]) == 4:
@@ -48,6 +49,7 @@ def is_four_of_a_kind(hand):
     return 0
 
 def is_three_of_a_kind(hand):
+    ''' we have to check if the hand has three similar numbers'''
     list1 = [i[0] for i in hand]
     for k in hand:
         if list1.count(k[0]) == 3:
@@ -55,6 +57,7 @@ def is_three_of_a_kind(hand):
     return 0
 
 def is_two_pair(hand):
+    ''' we have to check if the hand has two similar numbers pairs'''
     count1 = 0
     list1 = [i[0] for i in set(hand)]
     for k in hand:
@@ -65,6 +68,7 @@ def is_two_pair(hand):
     return 0
 
 def is_one_pair(hand):
+    ''' we have to check if the hand has two similar numbers'''
     list1 = [i[0] for i in hand]
     for k in hand:
         if list1.count(k[0]) == 2:
@@ -99,7 +103,7 @@ def hand_rank(hand):
         return 8
     elif is_four_of_a_kind(hand) == 1:
         return 7
-    elif is_three_of_a_kind(hand) ==1 and is_one_pair(hand) == 1:
+    elif is_three_of_a_kind(hand) == 1 and is_one_pair(hand) == 1:
         return 6
     elif is_flush(hand) == 1:
         return 5

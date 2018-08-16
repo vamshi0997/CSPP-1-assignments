@@ -13,17 +13,10 @@ def is_straight(hand):
         The first character is good enough to determine a straight
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
-    '''    
-    dic = {'1':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'K':12, 'Q':13, 'A':14}
-    num = []
-    temp2 = ''
-    sam = dict(hand)
-    temp = list(sam.keys())
-    for num1 in temp:
-        num.append(dic[num1])
-    num.sort()
-    for i in num:
-        temp2 = temp2 + str(i)+" "
+    '''
+    list1 = ["--23456789TJQKA".index(i) for i,v in hand]
+    for k in list1:
+        temp2 = temp2 + str(i)+ " "
     str1 = '1 2 3 4 5 6 7 8 9 10 11 12 13 14 '
     if temp2 in str1:
         return 1

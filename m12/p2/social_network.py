@@ -39,8 +39,7 @@ def delete_person(network, arg1):
         delete_person function is called when arg1 wants to exit from the network
         so, this should result in deleting arg1 from network
         also, before deleting arg1, remove arg1 from the everyone's followers list
-        update the network dictionary and return it
-    ''' 
+        update the network dictionary and return it'''
     for i in network:
         if arg1 in network[i]:
             network[i].remove(arg1)

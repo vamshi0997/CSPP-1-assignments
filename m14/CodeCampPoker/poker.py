@@ -75,6 +75,12 @@ def is_one_pair(hand):
             return 1
     return 0
 
+def high_card(hand):
+    t = 0
+    if max(hand) > t:
+        return 2
+    return 1
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -99,22 +105,23 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
+    max1 = 0
     if is_flush(hand) == 1 and is_straight(hand) == 1:
-        return 8
+        return 9
     elif is_four_of_a_kind(hand) == 1:
-        return 7
+        return 8
     elif is_three_of_a_kind(hand) == 1 and is_one_pair(hand) == 1:
-        return 6
+        return 7
     elif is_flush(hand) == 1:
-        return 5
+        return 6
     elif is_straight(hand) == 1:
-        return 4
+        return 5
     elif is_three_of_a_kind(hand) == 1:
-        return 3
+        return 4
     elif is_two_pair(hand) == 1:
-        return 2
+        return 3
     elif is_one_pair(hand) == 1:
-        return 1
+        return (2, is_one_pair(hand))
     return 0
 
 def poker(hands):

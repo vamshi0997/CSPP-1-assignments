@@ -61,7 +61,7 @@ def find(docs, text):
     
     d = dict()
     for i in docs:
-        docs = i.strip(',')
+        docs1 = i.strip(',')
     print(docs)
     for i in text:
         t1 = []

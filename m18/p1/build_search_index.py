@@ -54,19 +54,18 @@ def word_list(doc):
     regex = re.compile('[^a-z]')
     for w in words:
             words1.append((regex.sub("", w)))
+
     return words1
 
 def find(docs, text):
     docs = [i.lower() for i in docs]
     
     d = dict()
-    for i in docs:
-        docs1 = i.strip("'")
     print(docs1)
     for i in text:
         t1 = []
         for k in docs:
-            if i in k.lower():
+            if i == k.lower():
                 t1 .append((docs.index(k),(k.count(i))))
             d[i] = t1
     return d

@@ -61,11 +61,11 @@ def find(docs, text):
     
     d = dict()
     for i in docs:
-        docs1 = i.strip(',')
-    print(docs)
+        docs1 = strip("'")
+    print(docs1)
     for i in text:
         t1 = []
-        for k in docs1:
+        for k in docs:
             if i in k.lower():
                 t1 .append((docs.index(k),(k.count(i))))
             d[i] = t1

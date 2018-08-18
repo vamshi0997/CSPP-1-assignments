@@ -61,7 +61,6 @@ def find(docs, text):
     docs = [i.lower() for i in docs]
     
     d = dict()
-    print(docs1)
     for i in text:
         t1 = []
         for k in docs:

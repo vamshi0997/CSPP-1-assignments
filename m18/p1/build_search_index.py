@@ -53,11 +53,9 @@ def word_list(doc):
     regex = re.compile('[^a-z]')
     for w in words:
             words1.append((regex.sub("", w)))
-    print("hi",words1)
     return words1
 
 def find(docs, text):
-    print(docs)
     docs = [i.lower() for i in docs]
     
     
@@ -92,7 +90,6 @@ def build_search_index(docs):
     stopwords = load_stopwords('stopwords.txt')
     text = [i for i in docs1 if i not in stopwords]
     d = find(docs, text)
-    print(d)
     return d
 
 # helper function to print the search index

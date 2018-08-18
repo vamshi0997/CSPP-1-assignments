@@ -54,7 +54,6 @@ def word_list(doc):
     regex = re.compile('[^a-z]')
     for w in words:
             words1.append((regex.sub("", w)))
-            str1 = str1 + 
     return words1
 
 def find(docs, text):

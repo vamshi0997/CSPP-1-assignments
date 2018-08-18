@@ -43,6 +43,7 @@ def word_list(doc):
     words1 = []
     word = []
     words = []
+    str1 = ""
     for i in doc:
         i = i.lower()
         i = i.split(" ")
@@ -57,7 +58,6 @@ def word_list(doc):
 
 def find(docs, text):
     docs = [i.lower() for i in docs]
-    
     
     d = dict()
     for i in text:

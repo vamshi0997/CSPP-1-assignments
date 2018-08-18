@@ -59,14 +59,13 @@ def word_list(doc):
 
 def find(docs, text):
     docs = [i.lower() for i in docs]
-    
     d = dict()
     for i in text:
         t1 = []
         for k in docs:
             if i == k.lower():
                 t1 .append((docs.index(k),(k.count(i))))
-            d[i] = t1
+                d[i] = t1
     return d
 
 

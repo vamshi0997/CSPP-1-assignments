@@ -50,10 +50,10 @@ def word_list(doc):
         str2 = ''
         for j in k:
             str1 = ''
-            for l in j:
-                if l.isalpha() == False:
-                    l = ''
-                str1 = str1 + l
+            for temp in j:
+                if temp.isalpha() == False:
+                    temp = ''
+                str1 = str1 + temp
             str2 = str2 + str1 + " "
         words.append(str2)
     return words
@@ -75,7 +75,6 @@ def build_search_index(docs):
 
     # return search index
     search_index = dict()
-    
     docs1 = word_list(docs)
     stopwords = load_stopwords('stopwords.txt')
     text = [i.split() for i in docs1]

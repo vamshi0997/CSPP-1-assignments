@@ -47,7 +47,7 @@ def word_list(doc):
     doc = [i.lower() for i in doc]
     for i in doc:
         k = i.split(" ")
-        str2 =''
+        str2 = ''
         for j in k:
             str1 = ''
             for l in j:
@@ -56,14 +56,7 @@ def word_list(doc):
                 str1 = str1 + l
             str2 = str2 + str1 + " "
         words.append(str2)
-    
-    text = [i.split() for i in words]
     return words
-
-
-    
-
-
 
 def build_search_index(docs):
     '''
@@ -95,11 +88,9 @@ def build_search_index(docs):
             search_index[text_ele] = list1
     return search_index
 
-
-    
-
 # helper function to print the search index
 # use this to verify how the search index looks
+
 def print_search_index(index):
     '''
         print the search index

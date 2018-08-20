@@ -20,7 +20,6 @@
         .
     }
 '''
-import re
 
 # helper function to load the stop words from a file
 def load_stopwords(filename):
@@ -40,35 +39,23 @@ def word_list(doc):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    words1 = []
-    word = []
+
     words = []
-    str1 = ""
+    str1 = ''
+    str2 = ""
+    doc = [i.lower() for i in doc]
     for i in doc:
-        i = i.lower()
-        i = i.split(" ")
-        word += i
-
-    for w in word:
-        words.append(w.strip())
-    regex = re.compile('[^a-z]')
-    for w in words:
-            words1.append((regex.sub("", w)))
-
-    return words1
-
-def find(docs, text):
-    docs = [i.lower() for i in docs]
-    d = dict()
-    for i in text:
-        t1 = []
-        for k in docs:
-            if i == k.lower():
-                t1 .append((docs.index(k),(k.count(i))))
-                d[i] = t1
-    return d
-
-
+        k = i.split(" ")
+        str2 = ''
+        for j in k:
+            str1 = ''
+            for temp in j:
+                if temp.isalpha() == False:
+                    temp = ''
+                str1 = str1 + temp
+            str2 = str2 + str1 + " "
+        words.append(str2)
+    return words
 
 def build_search_index(docs):
     '''
@@ -86,14 +73,22 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
+    search_index = dict()
     docs1 = word_list(docs)
     stopwords = load_stopwords('stopwords.txt')
-    text = [i for i in docs1 if i not in stopwords]
-    d = find(docs, text)
-    return d
+    text = [i.split() for i in docs1]
+    text1 = [j for i in text for j in i if j not in stopwords]
+    for text_ele in text1:
+        list1 = []
+        for doc_id, doc_ele in enumerate(text):
+            if text_ele in doc_ele:
+                list1.append((doc_id, doc_ele.count(text_ele)))
+            search_index[text_ele] = list1
+    return search_index
 
 # helper function to print the search index
 # use this to verify how the search index looks
+
 def print_search_index(index):
     '''
         print the search index

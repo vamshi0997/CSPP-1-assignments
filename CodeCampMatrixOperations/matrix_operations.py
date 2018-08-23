@@ -18,7 +18,6 @@ def mult_matrix(matrix1, matrix2):
                 for k in range(columns[0]):
                     matrix3[i][j] += matrix1[i][k] * matrix2[k][j]
         return matrix3
-    
     print("Error: Matrix shapes invalid for mult")
     return None
 
@@ -40,7 +39,6 @@ def add_matrix(matrix1, matrix2):
             for j in range(columns[1]):
                 matrix3[i][j] = matrix1[i][j] + matrix2[i][j]
         return matrix3
-    
     print("Error: Matrix shapes invalid for addition")
     return None
 

@@ -1,6 +1,6 @@
 '''this is matrix program'''
 import numpy
-def mult_matrix(m1, m2):
+def mult_matrix(matrix1, matrix2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -9,21 +9,21 @@ def mult_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
 
-    rows = numpy.shape(m1)
-    columns = numpy.shape(m2)
+    rows = numpy.shape(matrix1)
+    columns = numpy.shape(matrix2)
     matrix3 = [[0]*columns[1] for i in range(rows[0])]
     if rows[1] == columns[0]:
         for i in range(rows[0]):
             for j in range(columns[1]):
                 for k in range(columns[0]):
-                    matrix3[i][j] += m1[i][k] * m2[k][j]
+                    matrix3[i][j] += matrix1[i][k] * matrix2[k][j]
         return matrix3
     else:
         print("Error: Matrix shapes invalid for mult")
         return None
 
 
-def add_matrix(m1, m2):
+def add_matrix(matrix1, matrix2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -32,13 +32,13 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
 
-    rows = numpy.shape(m1)
-    columns = numpy.shape(m2)
+    rows = numpy.shape(matrix1)
+    columns = numpy.shape(matrix2)
     matrix3 = [[0]*columns[1] for i in range(rows[0])]
     if rows == columns:
         for i in range(rows[0]):
             for j in range(columns[1]):
-                matrix3[i][j] = m1[i][j] + m2[i][j]
+                matrix3[i][j] = matrix1[i][j] + matrix2[i][j]
         return matrix3
     else:
         print("Error: Matrix shapes invalid for addition")

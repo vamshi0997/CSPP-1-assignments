@@ -36,10 +36,10 @@ def add_matrix(m1, m2):
     columns = numpy.shape(m2)
     matrix3 = [[0]*columns[1] for i in range(rows[0])]
     if rows == columns:
-            for i in range(rows[0]):
-                for j in range(columns[1]):
-                    matrix3[i][j] = m1[i][j] + m2[i][j]
-            return matrix3
+        for i in range(rows[0]):
+            for j in range(columns[1]):
+                matrix3[i][j] = m1[i][j] + m2[i][j]
+        return matrix3
     else:
         print("Error: Matrix shapes invalid for addition")
         return None
@@ -55,9 +55,9 @@ def read_matrix():
     rows, columns = [int(j) for j in input().split(",")]
     list1 = []
     for i in range(rows):
-        i = i + 1 
+        i = i + 1
         list2 = [int(k) for k in input().split(" ")]
-        if len(list2)!= columns:
+        if len(list2) != columns:
             print("Error: Invalid input for the matrix")
             return None
         list1.append(list2)

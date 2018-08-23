@@ -1,3 +1,4 @@
+'''this is matrix program'''
 import numpy
 def mult_matrix(m1, m2):
     '''
@@ -8,13 +9,13 @@ def mult_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
 
-    n1 = numpy.shape(m1)
-    n2 = numpy.shape(m2)
-    matrix3 = [[0]*n2[1] for i in range(n1[0])]
-    if n1[1] == n2[0]:
-        for i in range(n1[0]):
-            for j in range(n2[1]):
-                for k in range(n2[0]):
+    rows = numpy.shape(m1)
+    columns = numpy.shape(m2)
+    matrix3 = [[0]*columns[1] for i in range(rows[0])]
+    if rows[1] == columns[0]:
+        for i in range(rows[0]):
+            for j in range(columns[1]):
+                for k in range(columns[0]):
                     matrix3[i][j] += m1[i][k] * m2[k][j]
         return matrix3
     else:
@@ -30,13 +31,13 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    
-    n1 = numpy.shape(m1)
-    n2 = numpy.shape(m2)
-    matrix3 = [[0]*n2[1] for i in range(n1[0])]
-    if n1 == n2:
-            for i in range(n1[0]):
-                for j in range(n2[1]):
+
+    rows = numpy.shape(m1)
+    columns = numpy.shape(m2)
+    matrix3 = [[0]*columns[1] for i in range(rows[0])]
+    if rows == columns:
+            for i in range(rows[0]):
+                for j in range(columns[1]):
                     matrix3[i][j] = m1[i][j] + m2[i][j]
             return matrix3
     else:
@@ -51,11 +52,11 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    n1, n2 = [int(j) for j in input().split(",")]
+    rows, columns = [int(j) for j in input().split(",")]
     list1 = []
-    for i in range(n1):
+    for i in range(rows):
         list2 = [int(k) for k in input().split(" ")]
-        if len(list2)!= n2:
+        if len(list2)!= columns:
             print("Error: Invalid input for the matrix")
             return
         list1.append(list2)

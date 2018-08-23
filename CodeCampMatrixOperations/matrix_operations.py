@@ -55,27 +55,27 @@ def read_matrix():
     rows, columns = [int(j) for j in input().split(",")]
     list1 = []
     for i in range(rows):
+        i = i + 1 
         list2 = [int(k) for k in input().split(" ")]
         if len(list2)!= columns:
             print("Error: Invalid input for the matrix")
-            return
+            return None
         list1.append(list2)
     return list1
 
-
 def main():
-    # read matrix 1
+    '''# read matrix 1
 
     # read matrix 2
 
     # add matrix 1 and matrix 2
 
-    # multiply matrix 1 and matrix 2
+    # multiply matrix 1 and matrix 2'''
     matrix1 = read_matrix()
     matrix2 = read_matrix()
     if (matrix1 != None and matrix2 != None):
         print(add_matrix(matrix1, matrix2))
         print(mult_matrix(matrix1, matrix2))
-    
+
 if __name__ == '__main__':
     main()

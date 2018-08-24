@@ -9,7 +9,7 @@ def decide(count1, count2):
     elif count2 == 1:
         print("o")
         exit()
-    else :
+    else:
         print("draw")
         exit()
 
@@ -25,32 +25,31 @@ def game(check):
         for j in range(3):
             if i == j:
                 temp = temp + [check[i][j]]
-    n1 = temp.count('x')
-    n2 = temp.count('o')
-    if n1 == 3:
+    num1 = temp.count('x')
+    num2 = temp.count('o')
+    if num1 == 3:
         count1 = 1
-    elif n2 == 3:
+    elif num2 == 3:
         count2 = 1
 
     temp1 = temp1 + [check[0][2]] + [check[1][1]] + [check[2][0]]
-    c1 = temp1.count('x')
-    c2 = temp1.count('o')
-    if c1 == 3:
+    cou1 = temp1.count('x')
+    cou2 = temp1.count('o')
+    if cou1 == 3:
         count1 += 1
-    elif c2 == 3:
-        count2 += 1 
-
-    i =0
+    elif cou2 == 3:
+        count2 += 1
+    i = 0
     j = 0
     while i < 3:
-        temp = [] 
+        temp = []
         for j in range(3):
             temp = temp + [check[i][j]]
-        n1 = temp.count('x')
-        n2 = temp.count('o')
-        if n1 == 3:
+        num1 = temp.count('x')
+        num2 = temp.count('o')
+        if num1 == 3:
             count1 += 1
-        elif n2 == 3:
+        elif num2 == 3:
             count2 += 1
         i = i + 1
 
@@ -60,11 +59,11 @@ def game(check):
         temp = []
         for i in range(3):
             temp = temp + [check[i][j]]
-        n1 = temp.count('x')
-        n2 = temp.count('o')
-        if n1 == 3:
+        num1 = temp.count('x')
+        num2 = temp.count('o')
+        if num1 == 3:
             count1 += 1
-        elif n2 == 3:
+        elif num2 == 3:
             count2 += 1
         j = j + 1
 

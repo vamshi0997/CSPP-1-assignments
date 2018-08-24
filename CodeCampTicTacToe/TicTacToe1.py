@@ -1,5 +1,6 @@
 
 def decide(count1, count2):
+    '''deciding which letter to print'''
     if count1 >= 2 or count2 >= 2 or (count1 == 1 and count2 == 1):
         print("invalid game")
         exit()
@@ -13,9 +14,8 @@ def decide(count1, count2):
         print("draw")
         exit()
 
-
-
 def game(check):
+    '''enter into the game'''
     count1 = 0
     count2 = 0
     temp = []
@@ -69,9 +69,8 @@ def game(check):
 
     decide(count1, count2)
 
-        
-
 def main():
+    ''' take the input in for of list'''
     list2 = []
     for i in range(3):
         list1 = input().split(" ")

@@ -1,4 +1,4 @@
-
+''' game to play for tictactoe'''
 def decide(count1, count2):
     '''deciding which letter to print'''
     if count1 >= 2 or count2 >= 2 or (count1 == 1 and count2 == 1):

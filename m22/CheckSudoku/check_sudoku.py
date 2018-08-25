@@ -18,9 +18,9 @@ def check_sudoku(sudoku):
             if int(j)>= 1 and int(j) <= 9:
                 n = i.count(j)
                 if n > 1:
-                    return False
+                	return False
             else:
-                return False
+            	return False
     i = 0
     while i < 9:
         list1 = []
@@ -30,9 +30,9 @@ def check_sudoku(sudoku):
             if  int(k) >= 1 and int(k) <= 9:
                 n = list1.count(k)
                 if n > 1:
-                    return False
-                else:
-                    return False
+                	return False
+            else:
+                return False
         i = i + 1
 
 

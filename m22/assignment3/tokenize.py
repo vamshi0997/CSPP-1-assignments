@@ -7,9 +7,9 @@ def cleanup(word):
     '''cleaning up'''
     words = []
     regex = re.compile('[^a-z],[^A-Z],[^0-9]')
-    for w in word:
-        n = w.strip('"').strip('.').strip(';').strip(',').strip('"')
-        words.append((regex.sub("", n)))
+    for wor in word:
+        num = wor.strip('"').strip('.').strip(';').strip(',').strip('"')
+        words.append((regex.sub("", num)))
     return words
 
 def tokenize(string):
@@ -17,7 +17,7 @@ def tokenize(string):
     dictionary = dict()
     word = cleanup(string)
     for i in word:
-    	if i in word:
+        if i in word:
             dictionary[i] = word.count(i)
     return dictionary
 

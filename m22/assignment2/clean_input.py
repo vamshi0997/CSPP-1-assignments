@@ -6,11 +6,11 @@ alphabets in both upper and lower case and numbers.
 def clean_string(string):
     '''
     function for cleaning up the string'''
-    str = ""
+    str1 = ""
     for i in string:
         if i.isalnum() is True:
-            str = str + i
-    return str
+            str1 = str1 + i
+    return str1
 
 def main():
     '''

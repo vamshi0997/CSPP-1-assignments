@@ -9,7 +9,6 @@ def print_dictionary(dictionary):
     keys = sorted(dictionary.keys())
     for key in keys:
         print(key, "-", dictionary[key])
-    
 
 def main():
     '''dictionary takes input'''

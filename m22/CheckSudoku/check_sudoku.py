@@ -25,7 +25,7 @@ def check_sudoku(sudoku):
     while i < 9:
         list1 = []
         for j in range(9):
-            list1 = list1 + sudoku[j][i]
+            list1 = list1 + [sudoku[j][i]]
         for k in list1:
             if  int(k) >= 1 and int(k) <= 9:
                 n = list1.count(k)

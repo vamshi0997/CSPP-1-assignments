@@ -7,6 +7,8 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
+def set_matrix():
+
 
 def check_sudoku(sudoku):
     '''
@@ -33,8 +35,10 @@ def check_sudoku(sudoku):
                     return False
                 else:
                     return False
-    return True
+        i = i + 1
 
+
+    return True
 def main():
     '''
         main function to read input sudoku from console

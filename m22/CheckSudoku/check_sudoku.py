@@ -16,11 +16,11 @@ def check_sudoku(sudoku):
     for i in sudoku:
         for j in i:
             if int(j)>= 1 and int(j) <= 9:
-                n = i.count(j)
-                if n > 1:
-                	return False
+                num = i.count(j)
+                if num > 1:
+                    return False
             else:
-            	return False
+                return False
     i = 0
     while i < 9:
         list1 = []
@@ -28,9 +28,9 @@ def check_sudoku(sudoku):
             list1 = list1 + [sudoku[j][i]]
         for k in list1:
             if  int(k) >= 1 and int(k) <= 9:
-                n = list1.count(k)
-                if n > 1:
-                	return False
+                num = list1.count(k)
+                if num > 1:
+                    return False
             else:
                 return False
         i = i + 1
@@ -48,6 +48,7 @@ def main():
 
     # loop to read 9 lines of input from console
     for i in range(9):
+        i = i + 1
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)

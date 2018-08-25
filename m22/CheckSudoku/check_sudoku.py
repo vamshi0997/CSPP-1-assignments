@@ -15,7 +15,7 @@ def check_sudoku(sudoku):
     '''
     for i in sudoku:
         for j in i:
-            if int(j)>= 1 and int(j) <= 9:
+            if int(j) >= 1 and int(j) <= 9:
                 num = i.count(j)
                 if num > 1:
                     return False
@@ -42,7 +42,6 @@ def main():
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
     '''
-    
     # initialize empty list
     sudoku = []
 

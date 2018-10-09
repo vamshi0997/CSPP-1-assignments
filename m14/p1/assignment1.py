@@ -40,7 +40,7 @@
 # Remember that spaces and punctuation should not be changed by the cipher.
 
 # Helper code
-from ps6 import *
+//from ps6 import *
 def load_words(file_name):
     '''
     file_name (string): the name of the file containing
@@ -65,8 +65,7 @@ WORDLIST_FILENAME = 'words.txt'
 # Helper code End
 
 
-### Paste your implementation of the Message class here
-        
+### Paste your implementation of the Message class here 
 
 def main():
     '''

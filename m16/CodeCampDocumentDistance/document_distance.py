@@ -19,10 +19,16 @@ def similarity(dict1, dict2):
     return compute(diction)
 
 def remove_stopwords(word, stopwords):
+    '''
+    removing the stop words.
+    '''
     words1 = [i for i in word if i not in stopwords and len(i) > 0]
     return words1
 
 def cleanup(doc):
+    '''
+    cleaning up the document.
+    ''' 
     word = doc.lower()
     word = word.split(" ")
     words1 = []
@@ -35,6 +41,9 @@ def cleanup(doc):
     return words1
 
 def create_dictionary(word, word1, diction):
+    '''
+    creating a dictionary.
+    '''
     for i in word:
         list1 = []
         list1.append(word.count(i))

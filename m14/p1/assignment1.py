@@ -40,7 +40,7 @@
 # Remember that spaces and punctuation should not be changed by the cipher.
 
 # Helper code
-//from ps6 import *
+from ps6 import *
 def load_words(file_name):
     '''
     file_name (string): the name of the file containing

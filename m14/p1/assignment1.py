@@ -40,8 +40,8 @@
 # Remember that spaces and punctuation should not be changed by the cipher.
 
 # Helper code
-from ps6 import apply_shift
-from ps6 import get_message_text
+from ps6 import apply_shift()
+from ps6 import get_message_text()
 def load_words(file_name):
     '''
     file_name (string): the name of the file containing

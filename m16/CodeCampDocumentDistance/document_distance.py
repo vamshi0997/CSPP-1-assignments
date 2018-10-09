@@ -27,11 +27,11 @@ def cleanup(doc):
     word = word.split(" ")
     words1 = []
     words = []
-    for w in word:
-        words.append(w.strip())
+    for wor in word:
+        words.append(wor.strip())
     regex = re.compile('[^a-z]')
-    for w in words:
-            words1.append((regex.sub("", w)))
+    for wor in words:
+            words1.append((regex.sub("", wor)))
     return words1
 
 def create_dictionary(word, word1, diction):
@@ -60,8 +60,8 @@ def load_stopwords(filename):
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(filename, 'r') as file:
+        for line in file:
             stopwords[line.strip()] = 0
     return stopwords
 

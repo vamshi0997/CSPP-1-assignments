@@ -50,9 +50,9 @@ def create_dictionary(word, word1, diction):
     return diction
 
 def compute(diction):
-    ''
+    '''
     compute the diction.
-    ''
+    '''
     numerator = sum([i[0]*i[1] for i in diction.values()])
     denominator1 = math.sqrt(sum([i[0]**2 for i in diction.values()]))
     denominator2 = math.sqrt(sum([i[1]**2 for i in diction.values()]))

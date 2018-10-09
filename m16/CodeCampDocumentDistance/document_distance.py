@@ -71,8 +71,7 @@ def main():
     '''
     input1 = input()
     input2 = input()
-    
     print(similarity(input1, input2))
-
+    
 if __name__ == '__main__':
     main()

@@ -28,7 +28,7 @@ def remove_stopwords(word, stopwords):
 def cleanup(doc):
     '''
     cleaning up the document.
-    ''' 
+    '''
     word = doc.lower()
     word = word.split(" ")
     words1 = []
@@ -37,7 +37,7 @@ def cleanup(doc):
         words.append(wor.strip())
     regex = re.compile('[^a-z]')
     for wor in words:
-            words1.append((regex.sub("", wor)))
+        words1.append((regex.sub("", wor)))
     return words1
 
 def create_dictionary(word, word1, diction):
@@ -65,7 +65,7 @@ def compute(diction):
     numerator = sum([i[0]*i[1] for i in diction.values()])
     denominator1 = math.sqrt(sum([i[0]**2 for i in diction.values()]))
     denominator2 = math.sqrt(sum([i[1]**2 for i in diction.values()]))
-    return(numerator/(denominator1*denominator2))
+    return numerator/(denominator1*denominator2)
 
 def load_stopwords(filename):
     '''
